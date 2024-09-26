@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Grid Example</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <style>
+           #container{
+             display: grid;
+             grid-template-rows: 1fr 1fr;
+             grid-template-columns: 1fr 1fr 1fr;
+             grid-gap: 10px;
+           }
+
+           .item{
+             background:blue;
+             color:white;
+             padding:110px;
+           }
+
+           .item1{
+            grid-column: span 1; /* spans one column */
+            background-color: #ccc;
+            padding: 120px;
+           }
+
+           .item2{
+            grid-column: 2; /* starts are column 2 */
+            grid-row: span 2; /* spans two rows */
+            padding: 120px;
+           }
+
+           .item3{
+            grid-column: 1 ; /*starts at column 1 */
+            grid-row: span 2; /* spans two rows */
+            padding: 20px;
+           }
+
+
+        </style>
+    </head>
+
+<body>
+   <div id="container">
+        <div class="item item1">Item 1</div>
+        <div class="item item2">Item 2</div>
+        <div class="item item3">Item 3</div>
+   </div>
+</body>
+
+</html>
